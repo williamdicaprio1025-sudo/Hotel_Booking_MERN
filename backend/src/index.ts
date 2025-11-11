@@ -50,15 +50,15 @@ app.use('/api/v1/myHotels', myHotelRouter);
 app.use('/api/v1/hotels', hotelRouter);
 app.use('/api/v1/myBookings', bookingRouter);
 
-// send html file
-app.get('*', (req: Request, res: Response) => {
-  return res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'));
-});
+// // send html file
+// app.get('*', (req: Request, res: Response) => {
+//   return res.sendFile(path.join(__dirname, '../../frontend/dist/index.html'));
+// });
 
-// handle 404 routes
-app.use('*', (req: Request, res: Response) => {
-  return res.status(404).json({ message: 'Route not found' });
-});
+// // handle 404 routes
+// app.use('*', (req: Request, res: Response) => {
+//   return res.status(404).json({ message: 'Route not found' });
+// });
 
 // Global error handler middleware
 app.use(globalErrorHandler);
