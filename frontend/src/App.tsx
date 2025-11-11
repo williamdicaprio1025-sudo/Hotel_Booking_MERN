@@ -13,9 +13,12 @@ import {
   Search,
   SignIn,
 } from './pages';
+import { useDevToolsProtection } from './utils/DevToolsProtection';
 
 export default function App() {
   const { isLoggedIn } = useAppContext();
+
+  useDevToolsProtection();
 
   return (
     <BrowserRouter>
